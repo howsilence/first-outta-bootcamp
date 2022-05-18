@@ -22,10 +22,23 @@ Design a notification framework for letting the frontend know when data is/isnâ€
 
 
 # Steps
+First make sure you have <a href="https://nodejs.org/en/">node & npm</a> on your system.
 
+Next npm install should install all dependencies on to your machine but just incase it doesn't we're going to be using the following modules:
 
-# Thought process
+<a href="https://www.npmjs.com/package/express">express</a> (npm install express)
+<a href="https://www.npmjs.com/package/node-fetch">node-fetch</a> (npm install node-fetch)
+<a href="https://www.npmjs.com/package/mongoose">mongoose</a> (npm install mongoose)
+<a href="https://www.npmjs.com/package/nodemon">nodemon</a>
 
-# Dependancies
+We'll also be using <a href="https://docs.mongodb.com/manual/administration/install-community/">mongoDB</a> to act as our "offline" database.
+
+We spin up our local database with npm start in the terminal.
+
+Next in your terminal run node populatedb.js this will do an initial pull of the Leviathan Api to our local MongoDB database.
+
+CRUD functionality can be performed via <a href="https://www.postman.com/">postman</a>
+localhost is set to 5000, endpoints are /employee for index/post and /employee/:id for show, update and destroy.
 
 # Observations
+Inconsistency between databases, why do employees, customers and orders have overlappying categories but different keys/values? Why is telephone a string?
